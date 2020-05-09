@@ -1,0 +1,29 @@
+1. PPT-CATIN.pdf = https://www.pdfhost.net/index.php?Action=DownloadFile&id=26573bd376459fad330879bcdc5dea38
+2. PPT-BUMIL.pdf = https://www.pdfhost.net/index.php?Action=DownloadFile&id=4399033d3c026868c39ff1ecf8f6da22
+3. PPT-BAYI.pdf = 	https://www.pdfhost.net/index.php?Action=DownloadFile&id=366551202db6d96770e6cdcbdde016ed
+
+backup = 
+
+import * as React from "react";
+import PDFReader from "rn-pdf-reader-js";
+import { ScreenOrientation } from "expo";
+
+export default class BumilBukuMenuScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    ScreenOrientation.lockAsync(
+      ScreenOrientation.OrientationLock.LANDSCAPE_LEFT
+    );
+  }
+  render() {
+    return (
+      <PDFReader
+        source={{
+          uri:
+            "https://www.pdfhost.net/index.php?Action=DownloadFile&id=4399033d3c026868c39ff1ecf8f6da22"
+        }}
+      />
+    );
+  }
+}
+

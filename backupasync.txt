@@ -1,0 +1,202 @@
+//senin
+    AsyncStorage.getItem(global.fileSenin)
+      .then((value) => {
+        const result = JSON.parse(value);
+        this.setState({
+          mp_k1: result.mp_k + ",",
+          mp_ph1: result.mp_ph + ",",
+          mp_pn1: result.mp_pn + ",",
+          mp_s1: result.mp_s + ",",
+          mp_b1: result.mp_b + "",
+          s11: result.s1 + "",
+          ms_k1: result.ms_k + ",",
+          ms_ph1: result.ms_ph + ",",
+          ms_pn1: result.ms_pn + ",",
+          ms_s1: result.ms_s + ",",
+          ms_b1: result.ms_b + "",
+          s21: result.s2 + "",
+          mm_k1: result.mm_k + ",",
+          mm_ph1: result.mm_ph + ",",
+          mm_pn1: result.mm_pn + ",",
+          mm_s1: result.mm_s + ",",
+          mm_b1: result.mm_b + "",
+        });
+      })
+      .catch((error) => {
+        this.clearState(1);
+      });
+    //end senin
+
+    // selasa
+    AsyncStorage.getItem(global.fileSelasa)
+      .then((value) => {
+        const result = JSON.parse(value);
+        this.setState({
+          mp_k2: result.mp_k + ",",
+          mp_ph2: result.mp_ph + ",",
+          mp_pn2: result.mp_pn + ",",
+          mp_s2: result.mp_s + ",",
+          mp_b2: result.mp_b + "",
+          s12: result.s1 + "",
+          ms_k2: result.ms_k + ",",
+          ms_ph2: result.ms_ph + ",",
+          ms_pn2: result.ms_pn + ",",
+          ms_s2: result.ms_s + ",",
+          ms_b2: result.ms_b + "",
+          s22: result.s2 + "",
+          mm_k2: result.mm_k + ",",
+          mm_ph2: result.mm_ph + ",",
+          mm_pn2: result.mm_pn + ",",
+          mm_s2: result.mm_s + ",",
+          mm_b2: result.mm_b + "",
+        });
+      })
+      .catch((error) => {
+        this.clearState(2);
+      });
+    // end selasa
+
+    // rabu
+    AsyncStorage.getItem(global.fileRabu)
+      .then((value) => {
+        const result = JSON.parse(value);
+        this.setState({
+          mp_k3: result.mp_k + ",",
+          mp_ph3: result.mp_ph + ",",
+          mp_pn3: result.mp_pn + ",",
+          mp_s3: result.mp_s + ",",
+          mp_b3: result.mp_b + "",
+          s13: result.s1 + "",
+          ms_k3: result.ms_k + ",",
+          ms_ph3: result.ms_ph + ",",
+          ms_pn3: result.ms_pn + ",",
+          ms_s3: result.ms_s + ",",
+          ms_b3: result.ms_b + "",
+          s23: result.s2 + "",
+          mm_k3: result.mm_k + ",",
+          mm_ph3: result.mm_ph + ",",
+          mm_pn3: result.mm_pn + ",",
+          mm_s3: result.mm_s + ",",
+          mm_b3: result.mm_b + "",
+        });
+      })
+      .catch((error) => {
+        this.clearState(3);
+      });
+    // end rabu
+
+    // kamis
+    AsyncStorage.getItem(global.fileKamis)
+      .then((value) => {
+        const result = JSON.parse(value);
+        this.setState({
+          mp_k4: result.mp_k + ",",
+          mp_ph4: result.mp_ph + ",",
+          mp_pn4: result.mp_pn + ",",
+          mp_s4: result.mp_s + ",",
+          mp_b4: result.mp_b + "",
+          s14: result.s1 + "",
+          ms_k4: result.ms_k + ",",
+          ms_ph4: result.ms_ph + ",",
+          ms_pn4: result.ms_pn + ",",
+          ms_s4: result.ms_s + ",",
+          ms_b4: result.ms_b + "",
+          s24: result.s2 + "",
+          mm_k4: result.mm_k + ",",
+          mm_ph4: result.mm_ph + ",",
+          mm_pn4: result.mm_pn + ",",
+          mm_s4: result.mm_s + ",",
+          mm_b4: result.mm_b + "",
+        });
+      })
+      .catch((error) => {
+        this.clearState(4);
+      });
+    // end kamis
+
+    // jumat
+    AsyncStorage.getItem(global.fileJumat)
+      .then((value) => {
+        const result = JSON.parse(value);
+        this.setState({
+          mp_k5: result.mp_k + ",",
+          mp_ph5: result.mp_ph + ",",
+          mp_pn5: result.mp_pn + ",",
+          mp_s5: result.mp_s + ",",
+          mp_b5: result.mp_b + "",
+          s15: result.s1 + "",
+          ms_k5: result.ms_k + ",",
+          ms_ph5: result.ms_ph + ",",
+          ms_pn5: result.ms_pn + ",",
+          ms_s5: result.ms_s + ",",
+          ms_b5: result.ms_b + "",
+          s25: result.s2 + "",
+          mm_k5: result.mm_k + ",",
+          mm_ph5: result.mm_ph + ",",
+          mm_pn5: result.mm_pn + ",",
+          mm_s5: result.mm_s + ",",
+          mm_b5: result.mm_b + "",
+        });
+      })
+      .catch((error) => {
+        this.clearState(5);
+      });
+    // end jumat
+
+    // sabtu
+    AsyncStorage.getItem(global.fileSabtu)
+      .then((value) => {
+        const result = JSON.parse(value);
+        this.setState({
+          mp_k6: result.mp_k + ",",
+          mp_ph6: result.mp_ph + ",",
+          mp_pn6: result.mp_pn + ",",
+          mp_s6: result.mp_s + ",",
+          mp_b6: result.mp_b + "",
+          s16: result.s1 + "",
+          ms_k6: result.ms_k + ",",
+          ms_ph6: result.ms_ph + ",",
+          ms_pn6: result.ms_pn + ",",
+          ms_s6: result.ms_s + ",",
+          ms_b6: result.ms_b + "",
+          s26: result.s2 + "",
+          mm_k6: result.mm_k + ",",
+          mm_ph6: result.mm_ph + ",",
+          mm_pn6: result.mm_pn + ",",
+          mm_s6: result.mm_s + ",",
+          mm_b6: result.mm_b + "",
+        });
+      })
+      .catch((error) => {
+        this.clearState(6);
+      });
+    // end sabtu
+
+    // minggu
+    AsyncStorage.getItem(global.fileMinggu)
+      .then((value) => {
+        const result = JSON.parse(value);
+        this.setState({
+          mp_k7: result.mp_k + ",",
+          mp_ph7: result.mp_ph + ",",
+          mp_pn7: result.mp_pn + ",",
+          mp_s7: result.mp_s + ",",
+          mp_b7: result.mp_b + "",
+          s17: result.s1 + "",
+          ms_k7: result.ms_k + ",",
+          ms_ph7: result.ms_ph + ",",
+          ms_pn7: result.ms_pn + ",",
+          ms_s7: result.ms_s + ",",
+          ms_b7: result.ms_b + "",
+          s27: result.s2 + "",
+          mm_k7: result.mm_k + ",",
+          mm_ph7: result.mm_ph + ",",
+          mm_pn7: result.mm_pn + ",",
+          mm_s7: result.mm_s + ",",
+          mm_b7: result.mm_b + "",
+        });
+      })
+      .catch((error) => {
+        this.clearState(7);
+      });
+    // end minggu

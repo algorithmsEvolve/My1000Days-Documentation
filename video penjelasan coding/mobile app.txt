@@ -1,0 +1,30 @@
+- bahasa pemrograman: javascript, react
+Jadi, untuk proses bikin aplikasi nya kan namanya coding ya, nah coding itu proses bikin aplikasi dengan basis teks, jadi di ketik gitu, nah di ketik nya itu pake bahasa pemrograman er namanya.
+Untuk pembuatan aplikasi android ini gua pake bahasa pemrograman javascript sama bahasa pemrograman react, jadi ada 2 er. 
+Kenapa dua? Karna untuk coding tampilannya itu pake react, dan untuk proses pada saat interaksi pengguna dengan tampilan 
+(misal user ngeklik atau milih menu gitu gitu sama proses penghitungannya) pake bahasa javascript. Soalnya react cuma bisa untuk tampilan, dan javascript untuk proses nya, 
+makanya dipake 2 bahasa pemrograman.
+
+
+- framework: react native v0.61, expo v36
+Kalo framework itu kayak kerangka kerja, jadi kayak standarisasi dalam pengkodingan aplikasi android gitu, jadi di framework ini dibentuk struktur aplikasi nya yang udah sesuai standar
+Nah disini gua pake 2 framework, react native framework gua pake untuk aplikasi android pas dia dijalankan di hp nya, kalo expo framework gua pake pada saat pembuatan aplikasi nya
+
+
+- IDE (Integrated Development Environment): Microsoft Visual Studio Code v1.42
+Nah kalo ini aplikasi/software yang dipake untuk ngetik bahasa pemrograman nya, ibarat nya itu microsoft word buat ngetik laporan gitu kan, nah kalo untuk ngetik/koding aplikasi
+itu gua pake Ms visual studio code
+
+
+- SDK (Software Development Kit) : Android SDK
+Ini itu interpreter dari hasil codingan kita supaya bisa dijalanin di hp
+ kalo ini bisa di ibaratin itu kayak kamus untuk hp kita gitu er, jd kan kita ga ngerti ya bahasa mesin, nah hp kita juga ga ngerti bahasa pemrograman manusia,
+makanya si Android SDK itu yang menerjemahkan antar bahasa itu, supaya kita ngerti mau koding apa, dan hp kita ngerti cara ngebaca kodingan kita, jadi sinkron
+
+
+- Environment Device: Linux Ubuntu 18.04
+Kalo ini Operating System (OS) laptop/komputer yang dipake dalam pembuatan aplikasi ini.
+
+
+- Design App:
+Figma

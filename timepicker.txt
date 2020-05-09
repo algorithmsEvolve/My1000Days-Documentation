@@ -1,0 +1,56 @@
+import React, { Component } from "react";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import DateTimePicker from "react-native-modal-datetime-picker";
+
+export default class TimeScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isDatePickerVisible: false,
+      pickedDate: "",
+    };
+  }
+
+  //Date Picker handling methods
+  showPickah = () => {
+    this.setState({ isDatePickerVisible: true });
+  };
+  hideDatePicker = () => {
+    this.setState({ isDatePickerVisible: false });
+  };
+
+  handleDatePicked = (date) => {
+    const mdate = date.toString().split(" ");
+    this.setState({
+      pickedDate: mdate[1] + " " + mdate[2] + ", " + mdate[3],
+    });
+    this.hideDatePicker();
+  };
+
+  showDatePicker = () => {
+    this.setState({ isDatePickerVisible: true });
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        {/* Your View Here */}
+        <DateTimePicker
+          mode="time"
+          isVisible={this.state.isDatePickerVisible}
+          onConfirm={this.handleDatePicked}
+          onCancel={this.hideDatePicker}
+        />
+        <TouchableOpacity onPress={() => this.showPickah()}>
+          <Text>Show!</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

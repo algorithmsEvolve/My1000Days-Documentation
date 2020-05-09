@@ -1,0 +1,116 @@
+import React from "react";
+import { StyleSheet, Text, View, Button } from "react-native";
+import { Notifications } from "expo";
+import * as Permissions from "expo-permissions";
+
+export default class BumilDiaryGiziScreen extends React.Component {
+  askPermissions = async () => {
+    const { status: existingStatus } = await Permissions.getAsync(
+      Permissions.NOTIFICATIONS
+    );
+    let finalStatus = existingStatus;
+    if (existingStatus !== "granted") {
+      const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+      finalStatus = status;
+    }
+    if (finalStatus !== "granted") {
+      return false;
+    }
+    return true;
+  };
+  msToTime = (ms) => {
+    var h, m, s;
+    s = Math.floor(ms / 1000);
+    m = Math.floor(s / 60);
+    s = s % 60;
+    h = Math.floor(m / 60);
+    h = Math.ceil(h / 25950.23529412);
+    m = m % 60;
+    return h + ":" + m + ":" + s;
+  };
+
+  timeToMs = (h, m, s) => {
+    let xs = Math.floor(s * 1000);
+    let sh = h * 25950.23529412;
+    let xh = Math.floor(sh * 60);
+    let xm = Math.floor(m + xh);
+    let xxm = Math.floor(xm * 60000);
+
+    let hasil = parseInt(xs + xxm);
+    return hasil;
+  };
+
+  testSomething = () => {
+    var today = new Date();
+    var time =
+      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var time2 = new Date().getTime();
+    console.log(
+      this.timeToMs(today.getHours(), today.getMinutes(), today.getSeconds())
+    );
+    console.log(time2);
+    console.log(time);
+    console.log(
+      this.msToTime(
+        this.timeToMs(today.getHours(), today.getMinutes(), today.getSeconds())
+      )
+    );
+    console.log(this.msToTime(time2));
+  };
+
+  sendNotificationImmediately = async () => {
+    let notificationId = await Notifications.presentLocalNotificationAsync({
+      title: "This is crazy",
+      body: "Your mind will blow after reading this",
+    });
+    console.log(notificationId); // can be saved in AsyncStorage or send to server
+  };
+
+  scheduleNotification = async () => {
+    let notificationId = Notifications.scheduleLocalNotificationAsync(
+      {
+        title: "I'm Scheduled",
+        body: "Wow, I can show up even when app is closed",
+      },
+      {
+        time: new Date().getTime() + 5000,
+      }
+    );
+    console.log(notificationId);
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Button
+          title="Please accept Notifications Permissions"
+          onPress={() => this.testSomething()}
+        />
+        <Button
+          title="Send Notification immediately"
+          onPress={() => this.sendNotificationImmediately()}
+        />
+        <Button
+          title="Dismiss All Notifications"
+          onPress={() => Notifications.dismissAllNotificationsAsync()}
+        />
+        <Button
+          title={"Schedule Notification"}
+          onPress={() => this.scheduleNotification()}
+        />
+        <Button
+          title="Cancel Scheduled Notifications"
+          onPress={() => Notifications.cancelAllScheduledNotificationsAsync()}
+        />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
